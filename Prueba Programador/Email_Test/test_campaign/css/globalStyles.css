@@ -1,0 +1,209 @@
+.ios_copy a { text-decoration: none; color: #000001; }
+
+.ios_copy_4f4f4f a { text-decoration: none; color: #4f4f4f; }
+
+.ios_copy_ffffff a { text-decoration: none; color: #ffffff; }
+
+@media only screen and (max-width: 700px) { /* Breakpoint 700px */
+    /*Widths*/
+    *[class].w0 { width: 0px !important; }
+    *[class].w1 { width: 1px !important; }
+    *[class].w2 { width: 2px !important; }
+    *[class].w3 { width: 3px !important; }
+    *[class].w4 { width: 4px !important; }
+    *[class].w5 { width: 5px !important; }
+    *[class].w6 { width: 6px !important; }
+    *[class].w7 { width: 7px !important; }
+    *[class].w8 { width: 8px !important; }
+    *[class].w9 { width: 9px !important; }
+    *[class].w10 { width: 10px !important; }
+    *[class].w11 { width: 11px !important; }
+    *[class].w13 { width: 13px !important; }
+    *[class].w15 { width: 15px !important; }
+    *[class].w16 { width: 16px !important; }
+    *[class].w19 { width: 19px !important; }
+    *[class].w20 { width: 20px !important; }
+    *[class].w24 { width: 24px !important; }
+    *[class].w26 { width: 26px !important; }
+    *[class].w30 { width: 30px !important; }
+    *[class].w42 { width: 42px !important; }
+    *[class].w62 { width: 62px !important; }
+    *[class].w61 { width: 61px !important; }
+    *[class].w69 { width: 69px !important; }
+    *[class].w71 { width: 71px !important; }
+    *[class].w73 { width: 73px !important; }
+    *[class].w83 { width: 83px !important; }
+    *[class].w84 { width: 84px !important; }
+    *[class].w85 { width: 85px !important; }
+    *[class].w86 { width: 86px !important; }
+    *[class].w87 { width: 87px !important; }
+    *[class].w88 { width: 88px !important; }
+    *[class].w91 { width: 91px !important; }
+    *[class].w98 { width: 98px !important; }
+    *[class].w101 { width: 101px !important; }
+    *[class].w103 { width: 103px !important; }
+    *[class].w106 { width: 106px !important; }
+    *[class].w118 { width: 118px !important; }
+    *[class].w127 { width: 127px !important; }
+    *[class].w145 { width: 145px !important; }
+    *[class].w158 { width: 158px !important; }
+    *[class].w159 { width: 159px !important; }
+    *[class].w160 { width: 160px !important; }
+    *[class].w172 { width: 172px !important; }
+    *[class].w174 { width: 174px !important; }
+    *[class].w175 { width: 175px !important; }
+    *[class].w191 { width: 191px !important; }
+    *[class].w233 { width: 233px !important; }
+    *[class].w240 { width: 240px !important; }
+    *[class].w247 { width: 247px !important; }
+    *[class].w249 { width: 249px !important; }
+    *[class].w253 { width: 253px !important; }
+    *[class].w272 { width: 272px !important; }
+    *[class].w290 { width: 290px !important; }
+    *[class].w292 { width: 292px !important; }
+    *[class].w298 { width: 298px !important; }
+    *[class].w301 { width: 301px !important; }
+    *[class].w302 { width: 302px !important; }
+    *[class].w303 { width: 303px !important; }
+    *[class].w308 { width: 308px !important; }
+    *[class].w312 { width: 312px !important; }
+    *[class].w318 { width: 318px !important; }
+    *[class].w316 { width: 316px !important; }
+    *[class].w320 { width: 320px !important; }
+    /*Height*/
+    *[class].hauto { height: auto !important; }
+    *[class].h0 { height: 0px !important; }
+    *[class].h1 { height: 1px !important; }
+    *[class].h2 { height: 2px !important; }
+    *[class].h3 { height: 3px !important; }
+    *[class].h4 { height: 4px !important; }
+    *[class].h5 { height: 5px !important; }
+    *[class].h6 { height: 6px !important; }
+    *[class].h7 { height: 7px !important; }
+    *[class].h8 { height: 8px !important; }
+    *[class].h9 { height: 9px !important; }
+    *[class].h10 { height: 10px !important; }
+    *[class].h11 { height: 11px !important; }
+    *[class].h12 { height: 12px !important; }
+    *[class].h13 { height: 13px !important; }
+    *[class].h15 { height: 15px !important; }
+    *[class].h16 { height: 16px !important; }
+    *[class].h17 { height: 17px !important; }
+    *[class].h18 { height: 18px !important; }
+    *[class].h20 { height: 20px !important; }
+    *[class].h21 { height: 21px !important; }
+    *[class].h22 { height: 22px !important; }
+    *[class].h26 { height: 26px !important; }
+    *[class].h30 { height: 30px !important; }
+    *[class].h32 { height: 32px !important; }
+    *[class].h37 { height: 37px !important; }
+    *[class].h38 { height: 38px !important; }
+    *[class].h40 { height: 40px !important; }
+    *[class].h49 { height: 49px !important; }
+    *[class].h65 { height: 65px !important; }
+    *[class].h55 {height: 55px !important;}
+    *[class].h76 {height: 76px !important;}
+    *[class].h74 { height: 74px !important; }
+    *[class].h86 { height: 86px !important; }
+    *[class].h99 { height: 99px !important; }
+    *[class].h100 { height: 100px !important; }
+    *[class].h161 {height: 161px !important;}
+    *[class].h190 { height: 190px !important; }
+    *[class].h192 { height: 192px !important; }
+    *[class].h204 { height: 204px !important; }
+    *[class].h210 { height: 210px !important; }
+    *[class].h293 { height: 293px  !important; }
+    *[class].h313 { height: 313px  !important; }
+    *[class].h386 { height: 386px !important; }
+    *[class].h400 { height: 400px !important; }
+    *[class].h450 { height: 450px !important; }
+    *[class].h984 { height:984px !important; }
+    /*Line-Height*/
+    *[class].lh1 { line-height: 1px !important; }
+    *[class].lh10 { line-height: 10px !important; }
+    *[class].lh12 { line-height: 12px !important; }
+    *[class].lh13 { line-height: 13px !important; }
+    *[class].lh14 { line-height: 14px !important; }
+    *[class].lh15 { line-height: 15px !important; }
+    *[class].lh16 { line-height: 16px !important; }
+    *[class].lh18 { line-height: 18px !important; }
+    *[class].lh22 { line-height: 22px !important; }
+    *[class].lh24 { line-height: 24px !important; }
+    *[class].lh30 { line-height: 30px !important; }
+    *[class].lh32 { line-height: 32px !important; }
+    *[class].lh33 { line-height: 33px !important; }
+    *[class].lh38 { line-height: 38px !important; }
+    *[class].lh40 { line-height: 40px !important; }
+    *[class].lh48 { line-height: 48px !important; }
+    *[class].lh49 { line-height: 49px !important; }
+    *[class].lh78 { line-height: 78px !important; }
+    /*font-size*/
+    *[class].font8 { font-size: 8px !important; }
+    *[class].font10 { font-size: 10px !important; }
+    *[class].font12 { font-size: 12px !important; }
+    *[class].font13 { font-size: 13px !important; }
+    *[class].font14 { font-size: 14px !important; }
+    *[class].font15 { font-size: 15px !important; }
+    *[class].font16 { font-size: 16px !important; }
+    *[class].font17 { font-size: 17px !important; }
+    *[class].font18 { font-size: 18px !important; }
+    *[class].font19 { font-size: 19px !important; }
+    *[class].font21 { font-size: 21px !important; }
+    *[class].font22 { font-size: 22px !important; }
+    *[class].font28 { font-size: 28px !important; }
+    *[class].font32 { font-size: 32px !important; }
+    *[class].font35 { font-size: 35px !important; }
+    *[class].font47 { font-size: 47px !important; }
+    *[class].font77 { font-size: 77px !important; }
+    *[class].bgnone { background-image: none !important; }
+    *[class].bg100percent { background-size: 100% !important; }
+    *[class].bgtransparent{ background-color: transparent !important;}
+    *[class].bgcolorcecece { background-color: #cecece !important; }
+    *[class].bgcolorffffff { background-color: #ffffff !important; }
+    *[class].bgcc { background-color: #cccccc !important; }
+    *[class].colorffffff { color: #ffffff !important; }
+    *[class].fontArial { font-family: Arial, Helvetica, sans-serif !important; }
+    *[class].fontGeorgia { font-family: Georgia, 'Times New Roman', Times, serif !important; }
+    *[class].fontBold { font-weight: bold !important; }
+    *[class].textleft { text-align: left !important; }
+    *[class].textcenter { text-align: center !important; }
+    *[class].fontUpper { text-transform: uppercase !important; }
+    *[class].uline { text-decoration: underline !important; }
+    *[class].floatnone { float: none !important; }
+    *[class].hide { display: none !important; }
+    *[class].blockwrap { display: block !important; }
+    *[class].inlineblockwrap { display: inline-block !important; }
+    *[class].table { display: table !important; }
+    *[class].table-cell { display: table-cell !important; }
+    *[class].table_row { display: table-row-group !important; }
+    *[class].positionThree { display: table-footer-group !important; }
+    *[class].positionTwo { display: table-header-group !important; }
+    *[class].positionOne { display: table-caption !important; }
+    /* Start Header Nav */
+    *[class].giftcards:after { content: "GIFT CARDS" !important; }
+    *[class].bbccc { border-bottom: 1px solid #cccccc !important; }
+    /* Start call_module*/
+    *[class].bgcolore57102 { background-color: #e57102 !important; }
+    *[class].caretbg { background-image: url("http://www.llbean.com/epromo/images/service_emails/web_oty/x_caret.png") !important; background-repeat: no-repeat !important; }
+    *[class].questcont01:after { content: "Customer Service" !important; }
+    *[class].questcont02:after { content: "800-441-5713" !important; }
+    *[class].questcont03:after { content: "CALL" !important; }
+    /* footer_social */
+    *[class].footer_fb { background-image: url("http://www.llbean.com/epromo/images/150917_fb.gif") !important; background-repeat: no-repeat !important; }
+    *[class].footer_tw { background-image: url("http://www.llbean.com/epromo/images/150917_tw.gif") !important; background-repeat: no-repeat !important; }
+    *[class].footer_ins { background-image: url("http://www.llbean.com/epromo/images/150917_ins.gif") !important; background-repeat: no-repeat !important; }
+    *[class].h38 { height: 38px !important; }
+    /* Start Preferences */
+    *[class].viewbrowser1:after { content: "View this email in a " !important; }
+    *[class].viewbrowser2:after { content: "browser" !important; }
+    /* Start FS Issuance */
+    *[class].Dagger:after { content: "\002021" !important; }
+    *[class].FS1:after { content: "FREE SHIPPING" !important; }
+    *[class].FS2:after { content: "NO MINIMUM ORDER. NO END DATE." !important; }
+    /*NL Satisfaction Banner */
+    *[class].plus_fs { background-image: url("http://www.llbean.com/epromo/s16_0105_CP34_Newsletter/images/plus_free_shipping.jpg") !important; }
+    *[class].redeemByPhoneCTA:after { content: "REDEEM BY PHONE" !important; }
+    *[class].giftbx_bg { background-image: url("http://www.llbean.com/epromo/F15_1120_Holiday/images/holiday_gifts.gif") !important;}
+    /*New HF FS Banner*/
+    *[class].fs_banner_hf{background-image: url("http://www.llbean.com/epromo/s17/s17_header_footer/images/fs_banner_new_HF_mobile.jpg") !important;}
+    /*END*/ }

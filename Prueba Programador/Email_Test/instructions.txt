@@ -1,0 +1,25 @@
+Please follow the instructions to accomplishes the tasks below.
+
+New Campaign 
+
+Code an email campaign from scratch matching the comps. In the .zip file you can find a  
+folder called testing_campaign, which contains:
+
+	1.  The comps of the campaign.
+	2.  The sliced images.
+	3.  CSS file with some global styles.  
+
+Code just the main content, you can avoid the menu and the logo.
+
+
+Image URLs : 
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/primary_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary1_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary2_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary3_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary4_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary5_v1.jpg
+https://www.llbean.com/epromo/s18/180606_EM_Defend_Pima/images/secondary6_v1.jpg
+
+

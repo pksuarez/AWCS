@@ -1,0 +1,64 @@
+@media only screen and (max-width: 700px) { /* Breakpoint 700px */
+
+    /*CAMPAIGN CSS*/
+
+    *{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .logo{
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+
+    nav{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        display: inline-block;
+        float:left;
+        width: 14%;
+    }
+
+    a:visited{
+        color: black;
+    }
+
+    #campaing{
+        text-align: center;
+        width: 100%;
+    }
+
+    .primaryBanner{
+        width: 100%;
+    }
+
+    .secondaryBanners{
+        width: 100%  ;
+    }
+
+    .secondaryBanners img{
+        width: 50%;
+        float: left;
+
+    }
+
+    /*END*/ }
+
+
+@media only screen and (max-width: 629px) {
+
+    header{
+        display: none;
+    }
+
+}

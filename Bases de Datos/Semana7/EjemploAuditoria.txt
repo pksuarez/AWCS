@@ -1,0 +1,32 @@
+REM Eemplo de Auditoria en ORACLE
+
+select name , value from v$parameter where name like 'audit_trail';
+
+alter system set audit_trail = DB scope = spfile;
+
+select username , action_name , priv_used , returncode
+from dba_audit_trail;
+
+/* Activar la auditoria de sesion */
+
+audit session  whenever successful; 
+audit session  whenever not successful;
+
+select OS_USERNAME, USERNAME , USERHOST, RETURNCODE, to_char(TIMESTAMP, 'DD-MM-YYYY:HH24:MI:SS') 
+from dba_audit_session
+where to_date(TIMESTAMP, 'DD-MM-YYYY:HH24:MI:SS') in (select to_date(TIMESTAMP, 'DD-MM-YYYY:HH24:MI:SS')
+from dba_audit_session
+where to_date(TIMESTAMP,'DD-MM-YYYY:HH24:MI:SS') = to_date(sysdate, 'DD-MM-YYYY:HH24:MI:SS'))
+
+
+/ * AUDITORIA DE OBJETOS * /
+select * from user_obj_audit_opts;
+AUDIT INSERT,DELETE,UPDATE,SELECT ON FIDE1.STUDENTS;
+
+select username,to_char(timestamp,'DD-MM-YYYY:HH24:MI:SS') HORA_ACCESO, action_name
+from dba_audit_object
+where username = 'FIDE1' AND
+ACTION_NAME IN ('DELETE','INSERT','UPDATE','SELECT') AND 
+OBJ_NAME = 'STUDENTS' AND
+to_date(TIMESTAMP,'DD-MM-YYYY') = to_date(sysdate, 'DD-MM-YYYY')
+ORDER BY to_char(timestamp,'DD-MM-YYYY:HH24:MI:SS');

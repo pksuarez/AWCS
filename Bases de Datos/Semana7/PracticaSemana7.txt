@@ -1,0 +1,151 @@
+CREATE TABLESPACE "TBL_APPDAT2" 
+DATAFILE 'c:\oracle\DF_APPDAT2.dbf' SIZE 4M
+EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+
+CREATE TABLESPACE "APPIDX" 
+DATAFILE 'c:\oracle\APPIDX.dbf' SIZE 2M
+EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+
+CREATE USER fide1 PROFILE "DEFAULT" IDENTIFIED BY fide1
+DEFAULT TABLESPACE "TBL_APPDAT2" TEMPORARY TABLESPACE "TEMP" ACCOUNT
+UNLOCK;
+
+GRANT "CONNECT" TO fide1;
+
+GRANT "RESOURCE" TO fide1;
+
+CREATE ROLE rol_fide1;
+
+GRANT ALTER ANY INDEX TO rol_fide1;
+GRANT ALTER ANY SEQUENCE TO rol_fide1;
+GRANT ALTER ANY TABLE TO rol_fide1;
+GRANT ALTER ANY TRIGGER to rol_fide1;
+GRANT CREATE ANY INDEX TO rol_fide1;
+
+GRANT rol_fide1 TO fide1;
+
+
+CREATE TABLE STUDENTS
+(ID NUMBER (6) NOT NULL,
+FIRST_NAME VARCHAR(30) NOT NULL,
+LAST_NAME VARCHAR(30) NOT NULL,
+NOTA NUMBER(3) NOT NULL,
+PRIMARY KEY (ID));
+
+INSERT INTO STUDENTS
+VALUES (10,'PEDRO','PEREZ',90);
+
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE PrintStudents(p_nota IN students.nota%TYPE)
+AS
+CURSOR c_Students IS
+SELECT first_name, last_name
+FROM students
+WHERE nota >= p_nota;
+BEGIN
+FOR v_StudentRec IN c_Students LOOP
+DBMS_OUTPUT.PUT_LINE(v_StudentRec.first_name || ' ' ||
+v_StudentRec.last_name);
+END LOOP;
+END;
+
+BEGIN
+ PrintStudents(10);
+END;
+
+SELECT * FROM STUDENTS;
+
+CREATE OR REPLACE PROCEDURE agregarAlumno
+   (p_carne STUDENTS.ID%type,
+    p_nombre STUDENTS.FIRST_NAME%type,
+    p_apellido STUDENTS.LAST_NAME%TYPE,
+    p_nota STUDENTS.NOTA%TYPE)
+IS
+   v_id STUDENTS.ID%type:=0;
+   e1 EXCEPTION;
+
+BEGIN
+  if v_id=0 then
+  RAISE e1;
+  end if;
+     -- SELECT id into v_id FROM STUDENTS;
+    -- INSERT INTO STUDENTS (id, first_name,last_name,nota )
+    -- VALUES (p_carne, p_nombre,p_apellido,p_nota );
+EXCEPTION
+   WHEN DUP_VAL_ON_INDEX THEN
+      raise_application_error (-20001,'usted esta tratando de ingresar un carne que ya existe.');
+
+   WHEN e1 THEN
+      raise_application_error (-20001,'No existen Alumnos en la Tabla.');
+
+   WHEN OTHERS THEN
+      raise_application_error (-20002,'Ocurrio un error al insertar un Alumno.');
+
+END;
+
+
+BEGIN
+ agregarAlumno(40,'jose','perez',1000);
+END;
+
+CREATE TABLE LOG_TABLE
+(
+ErrorCode NUMBER,        
+ErrorMsg VARCHAR2(20),    
+Usuario VARCHAR2(8),
+Information VARCHAR2(100));
+
+drop table LOG_TABLE;
+
+
+
+CREATE OR REPLACE PROCEDURE agregarAlumno
+   (p_carne STUDENTS.ID%type,
+    p_nombre STUDENTS.FIRST_NAME%type,
+    p_apellido STUDENTS.LAST_NAME%TYPE,
+    p_nota STUDENTS.NOTA%TYPE)
+IS
+
+v_ErrorCode NUMBER;           -- Code for the error
+v_ErrorMsg VARCHAR2(20);      -- Message text for the error
+v_CurrentUser VARCHAR2(8);    -- Current database user
+v_Information VARCHAR2(100);  -- Information about the error
+
+BEGIN
+    INSERT INTO STUDENTS (id, first_name,last_name,nota )
+    VALUES (p_carne, p_nombre,p_apellido,p_nota );
+EXCEPTION
+WHEN OTHERS THEN
+  v_ErrorCode := SQLCODE;
+  v_ErrorMsg := SQLERRM;
+  v_CurrentUser := USER;
+  v_Information := 'Error encountered on ' ||
+  TO_CHAR(SYSDATE) || ' by database user ' || v_CurrentUser;
+INSERT INTO log_table (ErrorCode, ErrorMsg,usuario,Information)
+VALUES (v_ErrorCode, v_ErrorMsg,v_CurrentUser,v_Information);
+END;
+
+BEGIN
+ agregarAlumno(10,'jose','perez',1000);
+END;
+
+select * from log_table;
+
+REM This is an example of a database trigger.
+
+CREATE OR REPLACE TRIGGER SoloPositivo
+BEFORE INSERT OR UPDATE OF nota
+ON STUDENTS
+FOR EACH ROW
+BEGIN
+  IF :new.nota < 0 THEN
+    RAISE_APPLICATION_ERROR(-20100, 'Por favor digite una nota positiva');
+  END IF;
+END;
+
+
+update STUDENTS
+set nota=-100
+
+select * from students
